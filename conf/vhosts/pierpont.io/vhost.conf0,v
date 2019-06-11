@@ -1,0 +1,123 @@
+head	1.2;
+access;
+symbols;
+locks
+	root:1.2; strict;
+comment	@# @;
+
+
+1.2
+date	2019.02.21.02.04.16;	author root;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2019.02.21.00.47.43;	author root;	state Exp;
+branches;
+next	;
+
+
+desc
+@/usr/local/lsws/conf/vhosts/pierpont.io/vhost.conf0
+@
+
+
+1.2
+log
+@Update
+@
+text
+@docRoot                   $VH_ROOT/public_html
+vhDomain                  $VH_NAME
+vhAliases                 www.$VH_NAME
+adminEmails               pierpont.parker@@gmail.com
+enableGzip                1
+enableIpGeo               1
+
+index  {
+  useServer               0
+  indexFiles              index.php, index.html
+}
+
+errorlog $VH_ROOT/logs/$VH_NAME.error_log {
+  useServer               0
+  logLevel                ERROR
+  rollingSize             10M
+}
+
+accesslog $VH_ROOT/logs/$VH_NAME.access_log {
+  useServer               0
+  logFormat               "%v %h %l %u %t "%r" %>s %b"
+  logHeaders              5
+  rollingSize             10M
+  keepDays                10  compressArchive         1
+}
+
+scripthandler  {
+  add                     lsapi:pierpon php
+}
+
+extprocessor pierpon {
+  type                    lsapi
+  address                 UDS://tmp/lshttpd/pierpon.sock
+  maxConns                10
+  env                     LSAPI_CHILDREN=10
+  initTimeout             600
+  retryTimeout            0
+  persistConn             1
+  pcKeepAliveTimeout      1
+  respBuffer              0
+  autoStart               1
+  path                    /usr/local/lsws/lsphp73/bin/lsphp
+  extUser                 pierpon
+  extGroup                 pierpon
+  memSoftLimit            2047M
+  memHardLimit            2047M
+  procSoftLimit           400
+  procHardLimit           500
+}
+context /.filemanager {
+  location                /usr/local/lsws/Example/html/FileManager
+  allowBrowse             1
+  autoIndex               1
+
+  accessControl  {
+    allow                 127.0.0.1, localhost
+    deny                  0.0.0.0/0
+  }
+  rewrite  {
+        enable               0
+    
+      }
+      phpIniOverride  {
+php_value display_errors "Off"
+php_value upload_max_filesize "200M"
+php_value post_max_size "250M"
+}
+  addDefaultCharset       off
+}
+phpIniOverride  {
+}
+
+    rewrite  {
+      enable                  1
+      autoLoadHtaccess        1
+    }
+    
+vhssl  {
+  keyFile                 /etc/letsencrypt/live/pierpont.io/privkey.pem
+  certFile                /etc/letsencrypt/live/pierpont.io/fullchain.pem
+  certChain               1
+  sslProtocol             30
+}
+@
+
+
+1.1
+log
+@Update
+@
+text
+@d77 7
+a83 1
+    @

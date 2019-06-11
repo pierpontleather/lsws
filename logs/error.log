@@ -1,0 +1,69 @@
+2019-06-11 18:44:01.813684 [INFO] [PlainConf] [httpServerConfig:] start parsing file /usr/local/lsws/conf/httpd_config.conf
+2019-06-11 18:44:01.813700 [INFO] [PlainConf] [httpServerConfig:] RCS checkin config file /usr/local/lsws/conf/httpd_config.conf0 OK.
+2019-06-11 18:44:01.813704 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [checkprivatecache 1]
+2019-06-11 18:44:01.813708 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [checkpubliccache 1]
+2019-06-11 18:44:01.813711 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [maxcacheobjsize 10000000]
+2019-06-11 18:44:01.813714 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [maxstaleage 200]
+2019-06-11 18:44:01.813717 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [qscache 1]
+2019-06-11 18:44:01.813721 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [reqcookiecache 1]
+2019-06-11 18:44:01.813724 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [respcookiecache 1]
+2019-06-11 18:44:01.813727 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [ignorereqcachectrl 1]
+2019-06-11 18:44:01.813730 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [ignorerespcachectrl 0]
+2019-06-11 18:44:01.813734 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [enablecache 0]
+2019-06-11 18:44:01.813737 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [expireinseconds 3600]
+2019-06-11 18:44:01.813740 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [enableprivatecache 0]
+2019-06-11 18:44:01.813743 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [privateexpireinseconds 3600]
+2019-06-11 18:44:01.813749 [NOTICE] Loading LiteSpeed/1.4.43 Open ...
+2019-06-11 18:44:01.813760 [NOTICE] Using [BoringSSL]
+2019-06-11 18:44:01.815110 [NOTICE] [ADMIN] server socket: uds://usr/local/lsws/admin/tmp/admin.sock.7726
+2019-06-11 18:44:01.815365 [NOTICE] Recovering server socket: [*:80]
+2019-06-11 18:44:01.815387 [NOTICE] Recovering server socket: [*:443]
+2019-06-11 18:44:01.815399 [NOTICE] Recovering server socket: [*:7080]
+2019-06-11 18:44:01.815425 [NOTICE] chroot is disabled.
+2019-06-11 18:44:01.815440 [INFO] old priority: 0, new priority: 0
+2019-06-11 18:44:01.815459 [INFO] [config:server:basics2] For better obscurity, server version number is hidden in the response header.
+2019-06-11 18:44:01.829020 [INFO] [PlainConf] RCS checkin config file /usr/local/lsws/conf/mime.properties0 OK.
+2019-06-11 18:44:01.830822 [NOTICE] [PID: 28063]: forked cgid: 28071
+2019-06-11 18:44:01.830926 [INFO] [PlainConf] [adminConfig:] start parsing file /usr/local/lsws/admin/conf/admin_config.conf
+2019-06-11 18:44:01.839008 [INFO] [PlainConf] [adminConfig:] RCS checkin config file /usr/local/lsws/admin/conf/admin_config.conf0 OK.
+2019-06-11 18:44:01.840576 [INFO] [Module: modcompress 1.1] has been initialized successfully
+2019-06-11 18:44:01.840636 [INFO] [Module: moddecompress 1.1] has been initialized successfully
+2019-06-11 18:44:01.840690 [INFO] [Module: cache 1.59] has been initialized successfully
+2019-06-11 18:44:01.842979 [NOTICE] The maximum number of file descriptor limit is set to 30000.
+2019-06-11 18:44:01.843576 [INFO] [PlainConf] [virtualHostConfig:] start parsing file /usr/local/lsws/conf/vhosts/Example/vhconf.conf
+2019-06-11 18:44:01.850443 [INFO] [PlainConf] [virtualHostConfig:] RCS checkin config file /usr/local/lsws/conf/vhosts/Example/vhconf.conf0 OK.
+2019-06-11 18:44:01.850528 [INFO] [PlainConf] [context:/] rewrite [] add rules [rewritefile .htaccess]
+2019-06-11 18:44:01.850750 [INFO] [config:server:vhosts:vhost:Example] config conxtext /.
+2019-06-11 18:44:01.850788 [INFO] RewriteFile [.htaccess] parsed, return 0.
+2019-06-11 18:44:01.850796 [INFO] [config:server:vhosts:vhost:Example] config conxtext /blocked/.
+2019-06-11 18:44:01.850807 [INFO] [config:server:vhosts:vhost:Example] config conxtext /cgi-bin/.
+2019-06-11 18:44:01.850828 [INFO] [config:server:vhosts:vhost:Example] config conxtext /docs/.
+2019-06-11 18:44:01.850845 [INFO] [config:server:vhosts:vhost:Example] config conxtext /protected/.
+2019-06-11 18:44:01.850860 [ERROR] [config:server:vhosts:vhost:Example:context:/protected/] Path for context location is invalid: /usr/local/lsws/Example/html/protected/
+2019-06-11 18:44:01.850887 [INFO] [PlainConf] [virtualHostConfig:] start parsing file /usr/local/lsws/conf/vhosts/pierpont.io/vhost.conf
+2019-06-11 18:44:01.856656 [INFO] [PlainConf] [virtualHostConfig:] RCS checkin config file /usr/local/lsws/conf/vhosts/pierpont.io/vhost.conf0 OK.
+2019-06-11 18:44:01.858248 [INFO] [config:server:vhosts:vhost:pierpont.io] config conxtext /.filemanager.
+2019-06-11 18:44:01.858323 [INFO] Rewrite directive: <IfModule LiteSpeed> bypassed.
+2019-06-11 18:44:01.858332 [ERROR] Invalid rewrite directive: CacheLookup on
+2019-06-11 18:44:01.858382 [INFO] Rewrite directive: </IfModule> bypassed.
+2019-06-11 18:44:01.858388 [INFO] Rewrite directive: <IfModule mod_rewrite.c> bypassed.
+2019-06-11 18:44:01.858406 [INFO] Rewrite directive: </IfModule> bypassed.
+2019-06-11 18:44:01.858411 [INFO] Rewrite directive: <IfModule mod_rewrite.c> bypassed.
+2019-06-11 18:44:01.858415 [INFO] RewriteBase [/] parsed, set to HttpContext 0x2cd4d50.
+2019-06-11 18:44:01.858425 [INFO] Rewrite directive: </IfModule> bypassed.
+2019-06-11 18:44:01.858430 [INFO] RewriteFile [/home/pierpont.io/public_html/.htaccess] parsed, return 0.
+2019-06-11 18:44:01.858475 [INFO] [PlainConf] [virtualHostTemplate:] start parsing file /usr/local/lsws/conf/templates/ccl.conf
+2019-06-11 18:44:01.864713 [INFO] [PlainConf] [virtualHostTemplate:] RCS checkin config file /usr/local/lsws/conf/templates/ccl.conf0 OK.
+2019-06-11 18:44:01.864802 [INFO] [PlainConf] [context:/] rewrite [] add rules [rewritefile .htaccess]
+2019-06-11 18:44:01.864845 [INFO] [PlainConf] [virtualHostTemplate:] start parsing file /usr/local/lsws/conf/templates/phpsuexec.conf
+2019-06-11 18:44:01.870944 [INFO] [PlainConf] [virtualHostTemplate:] RCS checkin config file /usr/local/lsws/conf/templates/phpsuexec.conf0 OK.
+2019-06-11 18:44:01.871032 [INFO] [PlainConf] [context:/] rewrite [] add rules [rewritefile .htaccess]
+2019-06-11 18:44:01.871091 [INFO] [PlainConf] [virtualHostTemplate:] start parsing file /usr/local/lsws/conf/templates/rails.conf
+2019-06-11 18:44:01.877031 [INFO] [PlainConf] [virtualHostTemplate:] RCS checkin config file /usr/local/lsws/conf/templates/rails.conf0 OK.
+2019-06-11 18:44:01.877125 [INFO] [PlainConf] [context:/] rewrite [] add rules [rewritefile .htaccess]
+2019-06-11 18:44:01.877160 [NOTICE] [ZConfManager] No VHosts added, do not send!
+2019-06-11 18:44:01.877424 [NOTICE] [AutoRestarter] new child process with pid=28114 is forked!
+2019-06-11 18:44:01.877881 [NOTICE] [child: 28114] Successfully change current user to nobody
+2019-06-11 18:44:01.877906 [NOTICE] Child: 28114] Core dump is enabled.
+2019-06-11 18:44:01.877926 [NOTICE] [Child: 28114] Setup swapping space...
+2019-06-11 18:44:01.877993 [NOTICE] [Child: 28114] LiteSpeed/1.4.43 Open starts successfully!

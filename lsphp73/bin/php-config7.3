@@ -1,0 +1,90 @@
+#! /bin/sh
+
+SED="/bin/sed"
+prefix="/usr/local/lsws/lsphp73"
+datarootdir="/usr/local/lsws/lsphp73/share"
+exec_prefix="${prefix}"
+version="7.3.1-2+bionic"
+vernum="70301"
+include_dir="${prefix}/include/php"
+includes="-I$include_dir -I$include_dir/main -I$include_dir/TSRM -I$include_dir/Zend -I$include_dir/ext -I$include_dir/ext/date/lib"
+ldflags=" -L/usr/lib/x86_64-linux-gnu/mit-krb5 -L/usr/lib/x86_64-linux-gnu"
+libs="-lcrypt   -lzip -lz -lexslt -lresolv -lcrypt -ledit -lncurses -lstdc++ -lgmp -lX11 -lXpm -lpng -lz -ljpeg -lenchant -lz -lrt -lm -ldl -lnsl  -lxml2 -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err -lssl -lcrypto -lxml2 -lssl -lcrypto -lfreetype -lxml2 -lxml2 -lcrypt -lxml2 -lxml2 -lxml2 -lxslt -lxml2 -lssl -lcrypto -lcrypt "
+extension_dir='/usr/local/lsws/lsphp73/lib/php/20180731'
+man_dir=`eval echo ${datarootdir}/man`
+program_prefix=""
+program_suffix="7.3"
+exe_extension=""
+php_cli_binary=NONE
+php_cgi_binary=NONE
+configure_options=" '--prefix=/usr/local/lsws/lsphp73' '--disable-cgi' '--enable-cli' '--enable-phpdbg=no' '--with-litespeed' '--with-config-file-path=/usr/local/lsws/lsphp73/etc/php/7.3/litespeed/' '--with-config-file-scan-dir=/usr/local/lsws/lsphp73/etc/php/7.3/mods-available/' '--build=x86_64-linux-gnu' '--host=x86_64-linux-gnu' '--libdir=${prefix}/lib/php' '--libexecdir=${prefix}/lib/php' '--datadir=${prefix}/share/php/7.3' '--program-suffix=7.3' '--disable-all' '--disable-debug' '--disable-rpath' '--disable-static' '--with-pic' '--with-layout=GNU' '--without-pear' '--enable-bcmath' '--enable-calendar' '--enable-ctype' '--enable-dom' '--with-enchant' '--enable-exif' '--with-gettext' '--with-gmp' '--enable-fileinfo' '--enable-filter' '--enable-ftp' '--enable-hash' '--with-iconv' '--enable-mbregex' '--enable-mbregex-backtrack' '--enable-mbstring' '--enable-phar' '--enable-posix' '--with-mcrypt' '--enable-mysqlnd-compression-support' '--with-zlib-dir' '--with-openssl=yes' '--with-libedit' '--enable-libxml' '--enable-session' '--enable-simplexml' '--enable-soap' '--enable-sockets' '--enable-tokenizer' '--enable-xml' '--enable-xmlreader' '--enable-xmlwriter' '--with-xsl' '--with-mhash=yes' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-zip' '--with-system-tzdata' '--with-gd' '--enable-gd-native-ttf' '--with-jpeg-dir' '--with-xpm-dir' '--with-png-dir' '--with-freetype-dir' '--with-vpx-dir' '--with-mysql-sock=/var/run/mysqld/mysqld.sock' '--disable-dtrace' '--enable-pdo' '--enable-mysqlnd' '--enable-pcntl' '--with-recode=shared,/usr' '--with-sqlite3=shared,/usr' '--with-pdo-sqlite=shared,/usr' '--with-pdo-dblib=shared,/usr' '--with-ldap=shared,/usr' '--with-ldap-sasl=/usr' '--enable-intl=shared' '--with-snmp=shared,/usr' '--enable-json=shared' '--with-pgsql=shared,/usr' '--with-pdo-pgsql=shared,/usr' '--enable-opcache' '--enable-opcache-file' '--enable-huge-code-pages' '--with-imap=shared,/usr' '--with-kerberos' '--with-imap-ssl=yes' '--with-mysqli=shared,mysqlnd' '--with-pdo-mysql=shared,mysqlnd' '--with-tidy=shared,/usr' '--with-pspell=shared,/usr' '--with-curl=shared,/usr' 'build_alias=x86_64-linux-gnu' 'host_alias=x86_64-linux-gnu' 'CFLAGS=-g -O2 -fdebug-prefix-map=/tmp/buildd/php7.3-7.3.1=. -fstack-protector-strong -Wformat -Werror=format-security -O2 -Wall -fsigned-char -fno-strict-aliasing -g'"
+php_sapis=" cli litespeed"
+
+# Set php_cli_binary and php_cgi_binary if available
+for sapi in $php_sapis; do
+  case $sapi in
+  cli)
+    php_cli_binary="${exec_prefix}/bin/${program_prefix}php${program_suffix}${exe_extension}"
+    ;;
+  cgi)
+    php_cgi_binary="${exec_prefix}/bin/${program_prefix}php-cgi${program_suffix}${exe_extension}"
+    ;;
+  esac
+done
+
+# Determine which (if any) php binary is available
+if test "$php_cli_binary" != "NONE"; then
+  php_binary="$php_cli_binary"
+else
+  php_binary="$php_cgi_binary"
+fi
+
+# Remove quotes
+configure_options=`echo $configure_options | $SED -e "s#'##g"`
+
+case "$1" in
+--prefix)
+  echo $prefix;;
+--includes)
+  echo $includes;;
+--ldflags)
+  echo $ldflags;;
+--libs)
+  echo $libs;;
+--extension-dir)
+  echo $extension_dir;;
+--include-dir)
+  echo $include_dir;;
+--php-binary)
+  echo $php_binary;;
+--php-sapis)
+  echo $php_sapis;;
+--configure-options)
+  echo $configure_options;;
+--man-dir)
+  echo $man_dir;;
+--version)
+  echo $version;;
+--vernum)
+  echo $vernum;;
+*)
+  cat << EOF
+Usage: $0 [OPTION]
+Options:
+  --prefix            [$prefix]
+  --includes          [$includes]
+  --ldflags           [$ldflags]
+  --libs              [$libs]
+  --extension-dir     [$extension_dir]
+  --include-dir       [$include_dir]
+  --man-dir           [$man_dir]
+  --php-binary        [$php_binary]
+  --php-sapis         [$php_sapis]
+  --configure-options [$configure_options]
+  --version           [$version]
+  --vernum            [$vernum]
+EOF
+  exit 1;;
+esac
+
+exit 0

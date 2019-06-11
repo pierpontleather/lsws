@@ -1,0 +1,118 @@
+2019-02-26 14:18:06.008944 [INFO] [PlainConf] [httpServerConfig:] start parsing file /usr/local/lsws/conf/httpd_config.conf
+2019-02-26 14:18:06.008963 [INFO] [PlainConf] [httpServerConfig:] RCS checkin config file /usr/local/lsws/conf/httpd_config.conf0 OK.
+2019-02-26 14:18:06.008967 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [checkprivatecache 1]
+2019-02-26 14:18:06.008971 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [checkpubliccache 1]
+2019-02-26 14:18:06.008974 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [maxcacheobjsize 10000000]
+2019-02-26 14:18:06.008977 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [maxstaleage 200]
+2019-02-26 14:18:06.008981 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [qscache 1]
+2019-02-26 14:18:06.008984 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [reqcookiecache 1]
+2019-02-26 14:18:06.008987 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [respcookiecache 1]
+2019-02-26 14:18:06.008990 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [ignorereqcachectrl 1]
+2019-02-26 14:18:06.008993 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [ignorerespcachectrl 0]
+2019-02-26 14:18:06.008997 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [enablecache 0]
+2019-02-26 14:18:06.009000 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [expireinseconds 3600]
+2019-02-26 14:18:06.009003 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [enableprivatecache 0]
+2019-02-26 14:18:06.009006 [INFO] [PlainConf] [httpServerConfig:] module [cache] add param [privateexpireinseconds 3600]
+2019-02-26 14:18:06.009012 [NOTICE] Loading LiteSpeed/1.4.43 Open ...
+2019-02-26 14:18:06.009023 [NOTICE] Using [BoringSSL]
+2019-02-26 14:18:06.010900 [NOTICE] [ADMIN] server socket: uds://usr/local/lsws/admin/tmp/admin.sock.7493
+2019-02-26 14:18:06.011155 [NOTICE] chroot is disabled.
+2019-02-26 14:18:06.011168 [INFO] old priority: 0, new priority: 0
+2019-02-26 14:18:06.011189 [INFO] [config:server:basics2] For better obscurity, server version number is hidden in the response header.
+2019-02-26 14:18:06.024049 [INFO] [PlainConf] RCS checkin config file /usr/local/lsws/conf/mime.properties0 OK.
+2019-02-26 14:18:06.025375 [NOTICE] [PID: 16573]: forked cgid: 16581
+2019-02-26 14:18:06.025463 [INFO] [PlainConf] [adminConfig:] start parsing file /usr/local/lsws/admin/conf/admin_config.conf
+2019-02-26 14:18:06.034457 [INFO] [PlainConf] [adminConfig:] RCS checkin config file /usr/local/lsws/admin/conf/admin_config.conf0 OK.
+2019-02-26 14:18:06.035281 [INFO] [Module: modcompress 1.1] has been initialized successfully
+2019-02-26 14:18:06.035336 [INFO] [Module: moddecompress 1.1] has been initialized successfully
+2019-02-26 14:18:06.035387 [INFO] [Module: cache 1.59] has been initialized successfully
+2019-02-26 14:18:06.038028 [NOTICE] The maximum number of file descriptor limit is set to 30000.
+2019-02-26 14:18:06.038568 [INFO] [PlainConf] [virtualHostConfig:] start parsing file /usr/local/lsws/conf/vhosts/Example/vhconf.conf
+2019-02-26 14:18:06.045093 [INFO] [PlainConf] [virtualHostConfig:] RCS checkin config file /usr/local/lsws/conf/vhosts/Example/vhconf.conf0 OK.
+2019-02-26 14:18:06.045169 [INFO] [PlainConf] [context:/] rewrite [] add rules [rewritefile .htaccess]
+2019-02-26 14:18:06.045388 [INFO] [config:server:vhosts:vhost:Example] config conxtext /.
+2019-02-26 14:18:06.045424 [INFO] RewriteFile [.htaccess] parsed, return 0.
+2019-02-26 14:18:06.045432 [INFO] [config:server:vhosts:vhost:Example] config conxtext /blocked/.
+2019-02-26 14:18:06.045443 [INFO] [config:server:vhosts:vhost:Example] config conxtext /cgi-bin/.
+2019-02-26 14:18:06.045464 [INFO] [config:server:vhosts:vhost:Example] config conxtext /docs/.
+2019-02-26 14:18:06.045482 [INFO] [config:server:vhosts:vhost:Example] config conxtext /protected/.
+2019-02-26 14:18:06.045491 [ERROR] [config:server:vhosts:vhost:Example:context:/protected/] Path for context location is invalid: /usr/local/lsws/Example/html/protected/
+2019-02-26 14:18:06.045521 [INFO] [PlainConf] [virtualHostConfig:] start parsing file /usr/local/lsws/conf/vhosts/pierpont.io/vhost.conf
+2019-02-26 14:18:06.051292 [INFO] [PlainConf] [virtualHostConfig:] RCS checkin config file /usr/local/lsws/conf/vhosts/pierpont.io/vhost.conf0 OK.
+2019-02-26 14:18:06.052884 [INFO] [config:server:vhosts:vhost:pierpont.io] config conxtext /.filemanager.
+2019-02-26 14:18:06.052960 [INFO] Rewrite directive: <IfModule LiteSpeed> bypassed.
+2019-02-26 14:18:06.052968 [ERROR] Invalid rewrite directive: CacheLookup on
+2019-02-26 14:18:06.053017 [INFO] Rewrite directive: </IfModule> bypassed.
+2019-02-26 14:18:06.053023 [INFO] Rewrite directive: <IfModule mod_rewrite.c> bypassed.
+2019-02-26 14:18:06.053041 [INFO] Rewrite directive: </IfModule> bypassed.
+2019-02-26 14:18:06.053045 [INFO] Rewrite directive: <IfModule mod_rewrite.c> bypassed.
+2019-02-26 14:18:06.053050 [INFO] RewriteBase [/] parsed, set to HttpContext 0x1c88b00.
+2019-02-26 14:18:06.053061 [INFO] Rewrite directive: </IfModule> bypassed.
+2019-02-26 14:18:06.053066 [INFO] RewriteFile [/home/pierpont.io/public_html/.htaccess] parsed, return 0.
+2019-02-26 14:18:06.053104 [INFO] [PlainConf] [virtualHostTemplate:] start parsing file /usr/local/lsws/conf/templates/ccl.conf
+2019-02-26 14:18:06.058775 [INFO] [PlainConf] [virtualHostTemplate:] RCS checkin config file /usr/local/lsws/conf/templates/ccl.conf0 OK.
+2019-02-26 14:18:06.058851 [INFO] [PlainConf] [context:/] rewrite [] add rules [rewritefile .htaccess]
+2019-02-26 14:18:06.058885 [INFO] [PlainConf] [virtualHostTemplate:] start parsing file /usr/local/lsws/conf/templates/phpsuexec.conf
+2019-02-26 14:18:06.064827 [INFO] [PlainConf] [virtualHostTemplate:] RCS checkin config file /usr/local/lsws/conf/templates/phpsuexec.conf0 OK.
+2019-02-26 14:18:06.064897 [INFO] [PlainConf] [context:/] rewrite [] add rules [rewritefile .htaccess]
+2019-02-26 14:18:06.064943 [INFO] [PlainConf] [virtualHostTemplate:] start parsing file /usr/local/lsws/conf/templates/rails.conf
+2019-02-26 14:18:06.070478 [INFO] [PlainConf] [virtualHostTemplate:] RCS checkin config file /usr/local/lsws/conf/templates/rails.conf0 OK.
+2019-02-26 14:18:06.070547 [INFO] [PlainConf] [context:/] rewrite [] add rules [rewritefile .htaccess]
+2019-02-26 14:18:06.070576 [NOTICE] [ZConfManager] No VHosts added, do not send!
+2019-02-26 14:18:06.070792 [NOTICE] [AutoRestarter] new child process with pid=16624 is forked!
+2019-02-26 14:18:06.071227 [NOTICE] [child: 16624] Successfully change current user to nobody
+2019-02-26 14:18:06.071253 [NOTICE] Child: 16624] Core dump is enabled.
+2019-02-26 14:18:06.071285 [NOTICE] [Child: 16624] Setup swapping space...
+2019-02-26 14:18:06.071350 [NOTICE] [Child: 16624] LiteSpeed/1.4.43 Open starts successfully!
+2019-02-26 14:18:45.152208 [INFO] Tried to add new context: URI /wp-admin/ location /home/pierpont.io/public_html/wp-admin/, result 0x1cd2690
+2019-02-26 14:18:47.733574 [INFO] Tried to add new context: URI /wp-content/ location /home/pierpont.io/public_html/wp-content/, result 0x1ccfbf0
+2019-02-26 14:18:47.733625 [INFO] Tried to add new context: URI /wp-content/themes/ location /home/pierpont.io/public_html/wp-content/wp-content/themes/, result 0x1cfa4c0
+2019-02-26 14:18:47.739494 [INFO] Tried to add new context: URI /wp-content/plugins/ location /home/pierpont.io/public_html/wp-content/wp-content/plugins/, result 0x1cfa060
+2019-02-26 14:18:48.579354 [INFO] Tried to add new context: URI /wp-includes/ location /home/pierpont.io/public_html/wp-includes/, result 0x1cfa430
+2019-02-26 14:18:48.579427 [INFO] Tried to add new context: URI /wp-includes/js/ location /home/pierpont.io/public_html/wp-includes/wp-includes/js/, result 0x1cfa550
+2019-02-26 14:18:52.747934 [INFO] Tried to add new context: URI /wp-admin/js/ location /home/pierpont.io/public_html/wp-admin/wp-admin/js/, result 0x1d21ca0
+2019-02-26 14:19:01.998435 [INFO] Tried to add new context: URI /wp-admin/css/ location /home/pierpont.io/public_html/wp-admin/wp-admin/css/, result 0x1d46670
+2019-02-26 14:19:02.052135 [INFO] Tried to add new context: URI /wp-includes/css/ location /home/pierpont.io/public_html/wp-includes/wp-includes/css/, result 0x1d46700
+2019-02-26 14:19:02.106154 [INFO] Tried to add new context: URI /wp-admin/images/ location /home/pierpont.io/public_html/wp-admin/wp-admin/images/, result 0x1d21f90
+2019-02-26 14:19:03.432356 [INFO] Tried to add new context: URI /wp-content/uploads/ location /home/pierpont.io/public_html/wp-content/wp-content/uploads/, result 0x1d46790
+2019-02-26 14:19:08.014381 [NOTICE] [24.27.90.1:61558:HTTP2-243] No request delivery notification has been received from LSAPI application, possible dead lock.
+2019-02-26 14:19:08.130853 [NOTICE] [24.27.90.1:61558:HTTP2-243] No request delivery notification has been received from LSAPI application, possible dead lock.
+2019-02-26 14:19:14.515592 [INFO] Tried to add new context: URI /about-us/ location /home/pierpont.io/public_html/about-us/, result 0x1d622a0
+2019-02-26 15:33:39.512895 [INFO] Tried to add new context: URI /wp-includes/fonts/ location /home/pierpont.io/public_html/wp-includes/wp-includes/fonts/, result 0x1cc3eb0
+2019-02-26 16:21:59.502993 [INFO] Tried to add new context: URI /modules/ location /home/pierpont.io/public_html/modules/, result 0x1f48230
+2019-02-26 16:23:11.564323 [INFO] Tried to add new context: URI /solutions/ location /home/pierpont.io/public_html/solutions/, result 0x21ad420
+2019-02-26 16:25:08.753629 [INFO] Tried to add new context: URI /news/ location /home/pierpont.io/public_html/news/, result 0x21aab30
+2019-02-26 16:25:41.006627 [INFO] Tried to add new context: URI /wp-includes/images/ location /home/pierpont.io/public_html/wp-includes/wp-includes/images/, result 0x1f4b0c0
+2019-02-26 16:29:01.250545 [INFO] Tried to add new context: URI /blog/ location /home/pierpont.io/public_html/blog/, result 0x1f439e0
+2019-02-26 16:29:01.297724 [NOTICE] [165.225.34.159:58804:HTTP2-717] [STDERR] PHP Warning:  trim() expects parameter 1 to be string, object given in /home/pierpont.io/public_html/wp-includes/class-wp-meta-query.php on line 613
+2019-02-26 16:31:52.745789 [INFO] Tried to add new context: URI /jetsource/ location /home/pierpont.io/public_html/jetsource/, result 0x1d5e1c0
+2019-02-26 16:51:24.502629 [NOTICE] [165.225.34.159:38036:HTTP2-129] [STDERR] PHP Warning:  trim() expects parameter 1 to be string, object given in /home/pierpont.io/public_html/wp-includes/class-wp-meta-query.php on line 613
+2019-02-26 17:11:34.256608 [INFO] Tried to add new context: URI /privacy-policy/ location /home/pierpont.io/public_html/privacy-policy/, result 0x1d655a0
+2019-02-26 17:25:47.289733 [INFO] Tried to add new context: URI /payments/ location /home/pierpont.io/public_html/payments/, result 0x1f4dff0
+2019-02-26 19:19:47.032287 [NOTICE] [165.225.34.159:2175:HTTP2-1] [STDERR] PHP Warning:  trim() expects parameter 1 to be string, object given in /home/pierpont.io/public_html/wp-includes/class-wp-meta-query.php on line 613
+2019-02-26 20:46:05.952796 [INFO] Tried to add new context: URI /contact/ location /home/pierpont.io/public_html/contact/, result 0x1f44d40
+2019-03-09 08:19:41.161122 [INFO] [212.133.246.127:35440] Connection idle time too long: 301 while in state: 2 watching for event: 4, close!
+2019-04-05 10:50:23.801110 [INFO] Tried to add new context: URI /admin/ location /usr/local/lsws/admin/html/admin/, result 0x1f4a500
+2019-06-11 16:52:14.370634 [INFO] Tried to add new context: URI /res/ location /usr/local/lsws/admin/html/res/, result 0x1f9f760
+2019-06-11 16:52:14.371217 [INFO] Tried to add new context: URI /res/css/ location /usr/local/lsws/admin/html/res/res/css/, result 0x1f3f670
+2019-06-11 16:52:14.377583 [INFO] Tried to add new context: URI /res/js/ location /usr/local/lsws/admin/html/res/res/js/, result 0x1f429d0
+2019-06-11 16:52:14.539779 [INFO] Tried to add new context: URI /res/img/ location /usr/local/lsws/admin/html/res/res/img/, result 0x1c49e60
+2019-06-11 16:52:14.629397 [INFO] Tried to add new context: URI /res/fonts/ location /usr/local/lsws/admin/html/res/res/fonts/, result 0x1f80bc0
+2019-06-11 16:53:24.328769 [NOTICE] [24.27.90.1:59862:HTTP2-1] [STDERR] [WebAdmin Console] Failed Login Attempt - username:admin ip:24.27.90.1 url:
+2019-06-11 16:53:27.652392 [NOTICE] [24.27.90.1:59862:HTTP2-13] [STDERR] [WebAdmin Console] Failed Login Attempt - username:adminrrjmZ8PXTeWGzBtY ip:24.27.90.1 url:
+2019-06-11 16:53:52.936443 [NOTICE] [24.27.90.1:59862:HTTP2-17] [STDERR] [WebAdmin Console] Failed Login Attempt - username:admin ip:24.27.90.1 url:
+2019-06-11 18:41:20.456619 [NOTICE] Server Restart Request via Signal...
+2019-06-11 18:41:20.457045 [INFO] Pass listener *:7080, copy fd 15 to 1002.
+2019-06-11 18:41:20.457060 [INFO] Pass listener *:443, copy fd 17 to 1001.
+2019-06-11 18:41:20.457065 [INFO] Pass listener *:80, copy fd 16 to 1000.
+2019-06-11 18:41:20.457282 [NOTICE] [Child: 16624] Start shutting down gracefully ...
+2019-06-11 18:41:20.457301 [INFO] Stop listener *:80.
+2019-06-11 18:41:20.457311 [INFO] Stop listener *:443.
+2019-06-11 18:41:20.457317 [INFO] Stop listener *:7080.
+2019-06-11 18:41:20.458367 [NOTICE] [Child: 16624] Shut down successfully! 
+2019-06-11 18:41:20.458384 [NOTICE] [AdminPHP] stop worker processes
+2019-06-11 18:41:20.458389 [NOTICE] [lsphp] stop worker processes
+2019-06-11 18:41:20.459121 [NOTICE] [pierpon] stop worker processes
+2019-06-11 18:41:20.485149 [NOTICE] [AutoRestarter] cleanup children processes and unix sockets belong to process 16624 !
+2019-06-11 18:41:20.543953 [NOTICE] [AutoRestarter] child process with pid=16624 exited with status=0!
+2019-06-11 18:41:20.543981 [NOTICE] [PID:16573] Server Stopped!
