@@ -80,3 +80,13 @@ Tue Jun 11 18:44:01 UTC 2019
 start, LSWS running: 1
 Tue Jun 11 18:44:11 UTC 2019
 status, LSWS running: 1
+Tue Jun 11 21:21:33 UTC 2019
+stop, LSWS running: 1
+Tue Jun 11 21:21:33 UTC 2019
+start, LSWS running: 1
+LSWS does not restart properly, check port 7080
+check port 7080 after kill all litespeed processes 
+Tue Jun 11 21:24:04 UTC 2019
+stop, LSWS running: 1
+Tue Jun 11 21:24:04 UTC 2019
+start, LSWS running: 0

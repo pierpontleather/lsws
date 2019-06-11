@@ -1,10 +1,20 @@
-head	1.11;
+head	1.13;
 access;
 symbols;
 locks
-	root:1.11; strict;
+	root:1.13; strict;
 comment	@# @;
 
+
+1.13
+date	2019.06.11.21.24.04;	author root;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2019.06.11.21.21.50;	author root;	state Exp;
+branches;
+next	1.11;
 
 1.11
 date	2019.02.26.14.18.05;	author root;	state Exp;
@@ -67,7 +77,7 @@ desc
 @
 
 
-1.11
+1.13
 log
 @Update
 @
@@ -286,6 +296,8 @@ virtualHost Example{
 }
 
 listener Default{
+  map                     epayknowledgebase.com epayknowledgebase.com
+  map                     jetpay.com jetpay.com
   map                     pierpont.io pierpont.io
     address                  *:80
     secure                   0
@@ -349,6 +361,40 @@ listener SSL {
 
 
 
+virtualHost jetpay.com {
+  vhRoot                  /home/$VH_NAME
+  configFile              $SERVER_ROOT/conf/vhosts/$VH_NAME/vhost.conf
+  allowSymbolLink         1
+  enableScript            1
+  restrained              1
+}
+virtualHost epayknowledgebase.com {
+  vhRoot                  /home/$VH_NAME
+  configFile              $SERVER_ROOT/conf/vhosts/$VH_NAME/vhost.conf
+  allowSymbolLink         1
+  enableScript            1
+  restrained              1
+}
+@
+
+
+1.12
+log
+@Update
+@
+text
+@d215 1
+d281 7
+@
+
+
+1.11
+log
+@Update
+@
+text
+@d215 1
+d279 7
 @
 
 
